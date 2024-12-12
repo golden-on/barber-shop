@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { HashRouter, Route, BrowserRouter as Routes } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import Reservation from './pages/Reservation';
@@ -11,12 +11,12 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <Router>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/reservation" element={<Reservation/>} />
         </Routes>
-      </Router>
+      </HashRouter>
     </React.StrictMode>
   );
 
